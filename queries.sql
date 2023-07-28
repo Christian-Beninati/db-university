@@ -42,6 +42,8 @@ WHERE `level` LIKE 'magistrale%';
 
 
 -- 7. How many departments does the university have? (12)
+SELECT COUNT(*) AS `total_departments` 
+FROM `departments`; 
 
 
 
