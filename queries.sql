@@ -4,7 +4,9 @@
 -- SELECT
 
 -- 1. Select all students born in 1990 (160)
-
+SELECT * 
+FROM `students`
+WHERE YEAR(date_of_birth) = 1990;
 
 
 -- 2. Select all courses worth more than 10 credits (479)
