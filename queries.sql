@@ -80,3 +80,8 @@ GROUP BY `exam_session`;
 
 
 -- 12. Count how many degree programs are there for each department.
+SELECT COUNT(*) AS `degree_courses`, `department_id` AS `department` 
+FROM `degrees` 
+GROUP BY `department_id`;
+
+
