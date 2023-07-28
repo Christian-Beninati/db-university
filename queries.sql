@@ -6,7 +6,7 @@
 -- 1. Select all students born in 1990 (160)
 SELECT * 
 FROM `students`
-WHERE YEAR(date_of_birth) = 1990;
+WHERE YEAR(`date_of_birth`) = 1990;
 
 
 -- 2. Select all courses worth more than 10 credits (479)
@@ -16,7 +16,6 @@ WHERE `cfu` > 10;
 
 
 -- 3. Select all students over 30 years old
-
 
 
 -- 4. Select all courses from the first semester of the first year of any degree program (286)
