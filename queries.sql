@@ -16,6 +16,9 @@ WHERE `cfu` > 10;
 
 
 -- 3. Select all students over 30 years old
+SELECT *
+FROM `students`
+WHERE DATEDIFF(CURDATE(), `date_of_birth`) > 30;
 
 
 -- 4. Select all courses from the first semester of the first year of any degree program (286)
