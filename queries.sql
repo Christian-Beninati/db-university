@@ -48,7 +48,9 @@ FROM `departments`;
 
 
 -- 8. How many teachers do not have a phone number? (50)
-
+SELECT * 
+FROM `teachers` 
+WHERE `phone` IS NULL;
 
 
 
