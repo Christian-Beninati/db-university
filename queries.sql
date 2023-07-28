@@ -10,7 +10,9 @@ WHERE YEAR(date_of_birth) = 1990;
 
 
 -- 2. Select all courses worth more than 10 credits (479)
-
+SELECT * 
+FROM `courses`
+WHERE `cfu` > 10;
 
 
 -- 3. Select all students over 30 years old
