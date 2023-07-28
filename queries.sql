@@ -67,6 +67,9 @@ GROUP BY `year`;
 
 
 -- 10. Count the teachers who have their office in the same building.
+SELECT COUNT(*) as `teachers`, `office_address` 
+FROM `teachers` 
+GROUP BY `office_address`;
 
 
 
