@@ -74,7 +74,9 @@ GROUP BY `office_address`;
 
 
 -- 11. Calculate the average grade for each exam session.
-
+SELECT `exam_id` as `exam_session` , ROUND(AVG(`vote`)) AS `average` 
+FROM `exam_student` 
+GROUP BY `exam_session`;
 
 
 -- 12. Count how many degree programs are there for each department.
