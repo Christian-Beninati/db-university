@@ -1,3 +1,6 @@
+--DB UNIVERSITY - QUERIES  
+
+
 -- SELECT
 
 -- 1. Select all students born in 1990 (160)
