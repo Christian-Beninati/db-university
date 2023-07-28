@@ -29,7 +29,10 @@ AND `period` = 'I semestre';
 
 
 -- 5. Select all exam sessions that take place in the afternoon (after 2 PM) on 20th June 2020 (21)
-
+SELECT * 
+FROM `exams` 
+WHERE `date` = '2020-06-20' 
+AND HOUR(`hour`) >= '14:00:00';
 
 
 -- 6. Select all master's degree courses (38)
