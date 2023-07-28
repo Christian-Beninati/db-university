@@ -36,7 +36,9 @@ AND HOUR(`hour`) >= '14:00:00';
 
 
 -- 6. Select all master's degree courses (38)
-
+SELECT * 
+FROM `degrees` 
+WHERE `level` LIKE 'magistrale%';
 
 
 -- 7. How many departments does the university have? (12)
