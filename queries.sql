@@ -22,7 +22,10 @@ WHERE DATEDIFF(CURDATE(), `date_of_birth`) > 30;
 
 
 -- 4. Select all courses from the first semester of the first year of any degree program (286)
-
+SELECT * 
+FROM `courses` 
+WHERE `year` = 1 
+AND `period` = 'I semestre';
 
 
 -- 5. Select all exam sessions that take place in the afternoon (after 2 PM) on 20th June 2020 (21)
