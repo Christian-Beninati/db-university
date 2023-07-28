@@ -58,16 +58,20 @@ WHERE `phone` IS NULL;
 
 -- GROUP BY
 
--- 1. Count how many enrolled students there have been each year.
+-- 9. Count how many enrolled students there have been each year.
+SELECT COUNT(*) as `total_enrollments`, 
+YEAR(`enrolment_date`) as `year` 
+FROM `students` 
+GROUP BY `year`;
 
 
 
--- 2. Count the teachers who have their office in the same building.
+-- 10. Count the teachers who have their office in the same building.
 
 
 
--- 3. Calculate the average grade for each exam session.
+-- 11. Calculate the average grade for each exam session.
 
 
 
--- 4. Count how many degree programs are there for each department.
+-- 12. Count how many degree programs are there for each department.
