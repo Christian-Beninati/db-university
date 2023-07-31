@@ -90,10 +90,15 @@ GROUP BY `department_id`;
 ----------------------------------- JOIN ------------------------------------------
 
 --13 Select all students enrolled in the Economics degree course.
-
 SELECT S.`name`AS 'name_student', S.`surname` AS 'surname_student'
 FROM `students`AS S
 JOIN `degrees` AS D ON  S.`degree_id` = D.`id`
 WHERE D.`name`= 'Corso di Laurea in Economia';
 
+
+--14 Select all degree courses in the department of Neuroscience.
+SELECT DEP.`name` as `department`, DEG.`name` as `degree_course`      
+FROM `degrees` AS DEG
+JOIN `departments`AS DEP ON DEG.`department_id`= DEP.`id`
+WHERE DEP.`name` = 'Dipartimento di Neuroscienze';
 
