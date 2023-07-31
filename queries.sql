@@ -127,3 +127,15 @@ JOIN `courses`AS C ON C.`degree_id` = D.`id`
 JOIN `course_teacher` AS CT ON CT.`course_id` = C.`id`
 JOIN `teachers` AS T on T.`id` = CT.`teacher_id`
 ORDER BY D.`name`;
+
+
+--18 Select all lecturers teaching in the Mathematics department (54)
+SELECT DISTINCT T.`id`, T.`name` AS 'name_teacher', T.`surname`AS 'surname_teacher', DEP.`name`AS 'department'
+FROM `departments` AS DEP
+JOIN `degrees`AS DEG ON DEG.`department_id`= DEP.`id`
+JOIN `courses` AS C ON C.`degree_id` = DEG.`id`
+JOIN `course_teacher` AS CT ON CT.`course_id`=C.`id`
+JOIN `teachers`AS T ON CT.`teacher_id`= T.`id`
+WHERE DEP.`name`= 'Dipartimento di Matematica';
+
+
