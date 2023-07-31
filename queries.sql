@@ -139,3 +139,10 @@ JOIN `teachers`AS T ON CT.`teacher_id`= T.`id`
 WHERE DEP.`name`= 'Dipartimento di Matematica';
 
 
+--19 BONUS: Select for each student how many exam attempts they have taken to pass each of his exams
+SELECT S.`name`AS 'name_student' , S.`surname` AS `surname_student` , S.`registration_number`, C.`name` AS 'exam', COUNT(ES.`vote`) AS 'attempts'
+FROM `students` AS S
+JOIN `exam_student` AS ES ON ES.`student_id` = S.`id`
+JOIN `exams` AS E ON ES.`exam_id` = E.`id`
+JOIN`courses` AS C ON E.`course_id`= C.`id`
+GROUP BY S.`id`, C.`id`;
