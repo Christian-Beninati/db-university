@@ -110,3 +110,11 @@ JOIN `course_teacher` AS CT ON CT.`course_id` = C.`id`
 JOIN `teachers` AS T ON CT.`teacher_id` = T.`id`
 WHERE T.`name`= 'Fulvio'
 AND T.`surname`= 'Amato';
+
+
+--16 Select all students with data on the degree course in which they are enrolled and the relevant department, in alphabetical order by surname and first name.
+SELECT S.`surname`, S.`name`, DEP.`name` as `department`, DEG.`name` AS `degree_course`
+FROM `students` AS S
+JOIN `degrees`AS DEG ON S.`degree_id`= DEG.`id`
+JOIN `departments` AS DEP ON DEG.`department_id` = DEP.`id`
+ORDER BY S.`surname`, S.`name`;
