@@ -1,7 +1,8 @@
 --DB UNIVERSITY - QUERIES  
 
 
--- SELECT
+----------------------------------- SELECT ------------------------------------------
+
 
 -- 1. Select all students born in 1990 (160)
 SELECT * 
@@ -52,7 +53,10 @@ SELECT COUNT(*) AS `number_teachers`
 FROM `teachers` 
 WHERE `phone` IS NULL;
 
--- GROUP BY
+
+
+
+---------------------------------- GROUP BY-----------------------------------------
 
 -- 9. Count how many enrolled students there have been each year.
 SELECT COUNT(*) as `total_enrollments`, 
@@ -79,5 +83,17 @@ GROUP BY `exam_session`;
 SELECT COUNT(*) AS `degree_courses`, `department_id` AS `department` 
 FROM `degrees` 
 GROUP BY `department_id`;
+
+
+
+
+----------------------------------- JOIN ------------------------------------------
+
+--13 Select all students enrolled in the Economics degree course.
+
+SELECT S.`name`AS 'name_student', S.`surname` AS 'surname_student'
+FROM `students`AS S
+JOIN `degrees` AS D ON  S.`degree_id` = D.`id`
+WHERE D.`name`= 'Corso di Laurea in Economia';
 
 
