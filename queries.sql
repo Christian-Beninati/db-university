@@ -102,3 +102,11 @@ FROM `degrees` AS DEG
 JOIN `departments`AS DEP ON DEG.`department_id`= DEP.`id`
 WHERE DEP.`name` = 'Dipartimento di Neuroscienze';
 
+
+--15 Select all courses where Fulvio Amato teaches (id=44)
+SELECT T.`id`, T.`name`, T.`surname`, C.`name`AS 'course'
+FROM `courses` AS C
+JOIN `course_teacher` AS CT ON CT.`course_id` = C.`id`
+JOIN `teachers` AS T ON CT.`teacher_id` = T.`id`
+WHERE T.`name`= 'Fulvio'
+AND T.`surname`= 'Amato';
