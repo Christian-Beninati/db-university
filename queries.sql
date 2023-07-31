@@ -118,3 +118,12 @@ FROM `students` AS S
 JOIN `degrees`AS DEG ON S.`degree_id`= DEG.`id`
 JOIN `departments` AS DEP ON DEG.`department_id` = DEP.`id`
 ORDER BY S.`surname`, S.`name`;
+
+
+--17 Select all degree courses with their respective courses and teachers.
+SELECT D.`name`AS 'degree_course', C.`name`AS 'course', T.`name`AS 'name_teacher', T.`surname` AS 'surname_teacher'
+FROM `degrees` AS D
+JOIN `courses`AS C ON C.`degree_id` = D.`id`
+JOIN `course_teacher` AS CT ON CT.`course_id` = C.`id`
+JOIN `teachers` AS T on T.`id` = CT.`teacher_id`
+ORDER BY D.`name`;
